@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutometaLabs | Responsive Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><i class="bi bi-window-stack"></i> Tech Company</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-brand" href="#contact">Get started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <h1>One page.<br>Every screen.</h1>
+          <p class="lead fs-5 mt-4">AutometaLabs builds websites that rearrange themselves for phones, tablets, and desktops. Resize this window and watch the panel on the right react.</p>
+          <a href="#services" class="btn btn-brand mt-2">See our services <i class="bi bi-arrow-down"></i></a>
+        </div>
+        <div class="col-lg-5">
+          <div class="device" aria-live="off">
+            <div class="device-bar"><span>Your screen right now</span><span id="vpWidth">0 px</span></div>
+            <div class="device-screen">
+              <div class="text-secondary small">Bootstrap breakpoint</div>
+              <div class="bp-name" id="bpName">xs</div>
+              <div class="bp-cols" id="bpCols"><span></span><span></span><span></span></div>
+              <div class="small text-secondary mt-2" id="bpNote">Service cards: 1 per row</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <span class="section-label">About AutometaLabs</span>
+          <h2 class="fw-bold display-6 mt-2">Simple to use. Easy to read.</h2>
+          <p class="text-secondary">We build accessible, good-looking websites that adapt to any screen, using HTML, CSS, Bootstrap, and JavaScript.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-light text-center rounded-4 p-5">
+            <i class="bi bi-code-slash display-1 text-primary"></i>
+            <h3 class="fw-bold mt-3">Clean code</h3>
+            <p class="mb-0 text-secondary">HTML + CSS + Bootstrap + JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light" id="services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">What we offer</span>
+        <h2 class="fw-bold display-6 mt-2">Our services</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon mb-3"><i class="bi bi-palette"></i></div>
+            <h4 class="fw-bold">Web design</h4>
+            <p class="text-secondary">Clear layouts with consistent colours, typography, and spacing.</p>
+            <a href="#contact" class="text-primary fw-semibold text-decoration-none">Ask about design</a>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon mb-3"><i class="bi bi-code-square"></i></div>
+            <h4 class="fw-bold">Development</h4>
+            <p class="text-secondary">Interactive interfaces built with modern web technologies.</p>
+            <a href="#contact" class="text-primary fw-semibold text-decoration-none">Ask about development</a>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon mb-3"><i class="bi bi-phone"></i></div>
+            <h4 class="fw-bold">Responsive UI</h4>
+            <p class="text-secondary">Interfaces that stay usable on phones, tablets, laptops, and desktops.</p>
+            <a href="#contact" class="text-primary fw-semibold text-decoration-none">Ask about responsive UI</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="contact-panel">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <span class="section-label">Get in touch</span>
+            <h2 class="fw-bold display-6 mt-2">Tell us about your idea.</h2>
+            <p class="text-secondary">Fill in the form to try client-side validation. Nothing is sent to a server.</p>
+          </div>
+          <div class="col-lg-7">
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full name</label>
+                <input id="fullName" name="fullName" class="form-control" type="text" placeholder="Your name" required>
+                <div class="invalid-feedback">Enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input id="email" name="email" class="form-control" type="email" placeholder="you@example.com" required>
+                <div class="invalid-feedback">Enter a valid email address.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-control" rows="4" placeholder="Write your message" required></textarea>
+                <div class="invalid-feedback">Write a short message.</div>
+              </div>
+              <button class="btn btn-brand w-100" type="submit">Send message</button>
+              <div id="formFeedback" class="mt-3" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">&copy; <span id="year"></span> AutometaLabs. All rights reserved.</p>
+      <a class="text-white text-decoration-none" href="#home">Back to top <i class="bi bi-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
